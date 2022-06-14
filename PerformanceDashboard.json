@@ -1697,7 +1697,7 @@
           "measurement": "nasuni_disk",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT max(\"diskiola1\") FROM \"nasuni_disk\" WHERE (\"hostname\" =~ /^$Appliance$/ AND \"diskiodevice\" = 'nvme1n1') AND $timeFilter GROUP BY time($__interval), \"diskiodevice\"",
+          "query": "SELECT max(\"diskiola1\") FROM \"nasuni_disk\" WHERE (\"hostname\" =~ /^$Appliance$/ AND \"diskiodevice\" = 'dm-4') AND $timeFilter GROUP BY time($__interval), \"diskiodevice\"",
           "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
@@ -1725,7 +1725,7 @@
               "condition": "AND",
               "key": "diskiodevice",
               "operator": "=",
-              "value": "nvme1n1"
+              "value": "dm-4"
             }
           ]
         },
@@ -1748,7 +1748,7 @@
           "measurement": "nasuni_disk",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT max(\"diskiola5\") FROM \"nasuni_disk\" WHERE (\"hostname\" =~ /^$Appliance$/ AND \"diskiodevice\" = 'nvme1n1') AND $timeFilter GROUP BY time($__interval), \"diskiodevice\"",
+          "query": "SELECT max(\"diskiola5\") FROM \"nasuni_disk\" WHERE (\"hostname\" =~ /^$Appliance$/ AND \"diskiodevice\" = 'dm-4') AND $timeFilter GROUP BY time($__interval), \"diskiodevice\"",
           "rawQuery": false,
           "refId": "B",
           "resultFormat": "time_series",
@@ -1776,7 +1776,7 @@
               "condition": "AND",
               "key": "diskiodevice",
               "operator": "=",
-              "value": "nvme1n1"
+              "value": "dm-4"
             }
           ]
         },
@@ -1828,7 +1828,7 @@
               "condition": "AND",
               "key": "diskiodevice",
               "operator": "=",
-              "value": "nvme1n1"
+              "value": "dm-4"
             }
           ]
         }
@@ -2724,7 +2724,7 @@
           "measurement": "nasuni_disk",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT non_negative_derivative(sum(\"diskioreads\"), 1m) FROM \"nasuni_disk\" WHERE (\"hostname\" =~ /^$Appliance$/ AND \"diskiodevice\" = 'nvme1n1') AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "query": "SELECT non_negative_derivative(sum(\"diskioreads\"), 1m) FROM \"nasuni_disk\" WHERE (\"hostname\" =~ /^$Appliance$/ AND \"diskiodevice\" = 'dm-4') AND $timeFilter GROUP BY time($__interval) fill(null)",
           "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
@@ -2758,7 +2758,7 @@
               "condition": "AND",
               "key": "diskiodevice",
               "operator": "=",
-              "value": "nvme1n1"
+              "value": "dm-4"
             }
           ]
         },
@@ -2782,7 +2782,7 @@
           "measurement": "nasuni_disk",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT non_negative_derivative(mean(\"diskiowrites\"), 1m) FROM \"nasuni_disk\" WHERE (\"hostname\" =~ /^$Appliance$/ AND \"diskiodevice\" = 'nvme1n1') AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "query": "SELECT non_negative_derivative(mean(\"diskiowrites\"), 1m) FROM \"nasuni_disk\" WHERE (\"hostname\" =~ /^$Appliance$/ AND \"diskiodevice\" = 'dm-4') AND $timeFilter GROUP BY time($__interval) fill(null)",
           "rawQuery": false,
           "refId": "B",
           "resultFormat": "time_series",
@@ -2816,7 +2816,7 @@
               "condition": "AND",
               "key": "diskiodevice",
               "operator": "=",
-              "value": "nvme1n1"
+              "value": "dm-4"
             }
           ]
         }
